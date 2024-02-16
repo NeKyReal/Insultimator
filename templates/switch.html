@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Смена раскладки
+{% endblock %}
+
+{% block body %}
+    <h2 class="py-2 border-bottom">Смена раскладки</h2>
+    <ul>
+        <li>
+            <p>Забудьте о ненужных заботах при переключении раскладки! Наша удобная функция автоматически возвращает ваш текст в исходную раскладку, сохраняя при этом регистр букв. Будьте эффективными и продуктивными в работе, не теряя времени на переключение раскладки вручную.</p>
+        </li>
+        <li>
+            <p>Просто введите текст на русской раскладке и получите его обратно на английской, с минимальными усилиями. Это идеальное решение для всех, кто часто работает с текстом на разных языках и хочет сделать это быстро и эффективно.</p>
+        </li>
+    </ul>
+
+    <div class="card rounded-3 p-3 text-center">
+        <form method="post" action="/switch" class="form-inline d-grid gap-2">
+            <input type="text" placeholder="Ваше предложение" name="switch-layout" id="switch-layout" class="form-control" required>
+            <button type="submit" class="colorful btn btn-light btn-lg text-light">Результат</button>
+        </form>
+    </div>
+
+    {% if switched_text %}
+    <h3 class="pb-2 mt-5 border-bottom">Результат выполнения</h3>
+
+        <div class="row row-cols-1 row-cols-md-2 mt-4 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-2 rounded-3">
+                    <div class="colorful card-header py-3">
+                        <h5 class="link my-0 fw-normal">Исходное предложение</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="my-0 card-title fw-normal">{{ sentence }}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-2 rounded-3">
+                    <div class="colorful card-header py-3">
+                        <h5 class="link my-0">Наш выбор</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="my-0 card-title">{{ switched_text }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

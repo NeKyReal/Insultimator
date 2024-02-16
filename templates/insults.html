@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Оскорбления
+{% endblock %}
+
+{% block body %}
+    <h2 class="py-2 border-bottom">Генератор оскорблений</h2>
+    <ul>
+        <li>
+            <p>При нажатии на кнопку, генерирует случайное оскробление, основанное на словарном запасе <strong>Saneking</strong>. Оскорбление строится по формуле <var>прилагательное</var> + <var>существительное</var> + <var><strong>описательная характеристика</strong></var>.</p>
+        </li>
+        <li>
+            <p>Bikov «<strong>Saneking</strong>» Andrey – игрок carry-позиции в киберспортивной дисциплине Dota 2, в настоящее время без команды. Один из первых представителей «dead inside» культуры, прямиком из 2014 года.</p>
+        </li>
+    </ul>
+    <form method="post" action="/insults" class="form-inline d-grid">
+        <button type="submit" class="colorful btn btn-light btn-lg text-light">Результат</button>
+    </form>
+
+    {% if insult %}
+        <h3 class="pb-2 mt-5 border-bottom">Результат выполнения</h3>
+        <div class="card mt-4 rounded-3 text-center">
+            <div class="colorful card-header py-3">
+                <h5 class="link my-0">Оскорбление</h5>
+            </div>
+            <div class="card-body">
+                <h5 class="my-0 card-title fw-normal">{{ insult }}</h5>
+                {% if filename %}
+                    <div class="card mt-4 rounded-5 text-center">
+                        <audio controls class="audio">
+                            <source src="{{ filename }}" type="audio/mp3">
+                            Ваш браузер не поддерживает элемент "audio"
+                        </audio>
+                    </div>
+                {% else %}
+                    <div class="mt-4 alert alert-light" role="alert">
+                        На данный момент функция озвучивания текста недоступна в связи с ущербностью сервиса Dropbox.
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        Ошибка при синтезе речи.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

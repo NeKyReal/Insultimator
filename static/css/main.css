@@ -1,0 +1,63 @@
+body {
+    padding-top: 74px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.link {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.colorful {
+    background-image: linear-gradient(90deg, #647dee,  #7f53ac);
+}
+
+.themed-grid {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+.image-div {
+    background-image: url('../images/news.png');"
+}
+
+.text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.audio {
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
+.motion-container {
+  background: linear-gradient(90deg, #647dee,  #7f53ac);
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"), linear-gradient(90deg, #647dee,  #7f53ac);
+  animation: background-move 10s linear infinite;
+}
+
+@keyframes background-move {
+  0% { background-position: 0 0, 0 0; }
+  100% {
+    background-position: 100vw 0, 0 0;
+    background-position: unquote('max(100vw, 40em)')  0, 0 0;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Предупреждение</title>
+</head>
+
+<body>
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="motion-container card rounded-4 p-4">
+            <div class="card rounded-4 p-4">
+                <div class="image d-flex flex-column justify-content-center align-items-center text-center">
+                    <h1>Внимание!</h1>
+                    <p>Сайт содержит шуточные материалы и оскорбления, которые предназначены исключительно для развлечения. Любые совпадения с реальными людьми, животными, местами или событиями случайны.</p>
+                    <p>Мы не преследуем цель нанести ущерб чьей-либо репутации или вызвать негативные эмоции. Пожалуйста, примите наш контент с юмором и пониманием.</p>
+                    <p>Если у вас есть вопросы или предложения по улучшению контента, свяжитесь с нами.</p>
+                    <p>Спасибо за понимание!</p>
+
+                    <a href="/" class="d-flex mt-2 text-decoration-none">
+                        <button type="submit" class="colorful btn btn-light btn-lg text-light">Согласиться и продолжить</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
